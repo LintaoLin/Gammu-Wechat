@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import re
 import sys
 import requests
 import json
@@ -7,7 +8,7 @@ import datetime
 import subprocess
 
 #微信推送程序
-pushToWechatPyFile = '/home/ubuntu/Gammu-Wechat/pushToWechat.py'
+pushToWechatPyFile = '/home/pi/tools/Gammu-Wechat/pushToWechat.py'
 
 if __name__ == "__main__":
     #----------------------获取短信内容----------------------
@@ -19,7 +20,7 @@ if __name__ == "__main__":
         
     #多条短信内容
     else:
-        text = os.environ['DECODED_0_TEXT']
+        text = os.environ['DECODED_1_TEXT']
 
     #发件人
     sender = os.environ['SMS_1_NUMBER']
